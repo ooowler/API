@@ -22,7 +22,7 @@ def create_app() -> FastAPI:
     fast_api_app = FastAPI()
     fast_api_app.include_router(check_router)
 
-    add_events(fast_api_app)
+    # add_events(fast_api_app)
 
     return fast_api_app
 
