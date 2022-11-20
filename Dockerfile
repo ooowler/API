@@ -29,4 +29,8 @@ COPY . /code
 COPY pytest /code
 RUN pytest
 
-CMD ["uvicorn", "app.main:app", "--reload"]
+EXPOSE 8000
+
+ENV TZ Europe/Moscow
+
+CMD ["uvicorn", "app.main:app", "--reload", "--port", "8000"]
